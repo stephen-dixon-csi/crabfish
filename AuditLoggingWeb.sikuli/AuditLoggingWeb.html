@@ -72,23 +72,35 @@
 <pre class="sikuli-code">
 applicationPath = <span class="str">'C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe'</span>
 serverAddress = <span class="str">'https://qa-six.calgaryscientific.com:8443'</span>
+screen = None
 
 <span class="kw">def</span> connectToDatabase():
     <span class="kw">return</span>
 
+<span class="kw">def</span> pressTab(numTimes):
+    <span class="kw">for</span> i <span class="kw">in</span> xrange(<span class="dig">0</span>, numTimes):
+        <span class="skw">type</span>(<span class="str">'\t'</span>)
+
 <span class="kw">def</span> startApp():
+    <span class="kw">print</span> <span class="str">'Starting browser...'</span>
     openApp(applicationPath)
     <span class="cmt"># Shortcut to go to the address bar: CTRL+L
-</span>    <span class="skw">wait</span>(<span class="dig">1</span>)
+</span>    <span class="kw">print</span> <span class="str">'Navigating to test server...'</span>
+    <span class="skw">wait</span>(<span class="dig">1</span>)
     <span class="skw">type</span>(<span class="str">"l"</span>, KEY_CTRL)
     <span class="skw">type</span>(serverAddress + <span class="str">'\n'</span>)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
     <span class="kw">return</span>
 
 <span class="kw">def</span> login():
+    <span class="kw">print</span> <span class="str">'Logging into application...'</span>
     <span class="skw">wait</span>(<span class="dig">1</span>)
     <span class="skw">type</span>(<span class="str">'test30\tadmin\n'</span>)
-    <span class="skw">wait</span>(<span class="dig">10</span>)
-    exists(<img src="nf.png" />, <span class="dig">5</span>)
+    waitTime = <span class="dig">8</span>
+    <span class="skw">wait</span>(waitTime)
+    pressTab(<span class="dig">6</span>)
+    <span class="skw">type</span>(<span class="str">'\n'</span>)
+    <span class="skw">wait</span>(waitTime)
     <span class="kw">return</span>
 
 <span class="kw">def</span> checkLoginMessages():
@@ -98,6 +110,13 @@ serverAddress = <span class="str">'https://qa-six.calgaryscientific.com:8443'</s
     <span class="kw">return</span>
 
 <span class="kw">def</span> performSearches():
+    patient = <span class="str">'lemon'</span>
+    <span class="kw">print</span> <span class="str">'Performing search for patient \''</span> + patient + <span class="str">'\''</span>
+    <span class="skw">type</span>(patient)
+    aFirefox = App(<span class="str">"Firefox"</span>)
+    <span class="kw">with</span> aFirefox:
+        SCR1 = aFirefox.window().getScreen()
+        screen.<span class="skw">click</span>(Pattern(<img src="SearchButton.png" />).similar(<span class="dig">0.73</span>))
     <span class="kw">return</span>
 
 <span class="kw">def</span> checkSearchMessages():
@@ -123,9 +142,11 @@ serverAddress = <span class="str">'https://qa-six.calgaryscientific.com:8443'</s
     checkLoadingMessages()
     logout()
     checkLogoutMessage()
+    closeApp(applicationPath)
     <span class="kw">print</span> <span class="str">'yay!'</span>
 
 <span class="kw">if</span>(__name__==<span class="str">"__main__"</span>):
+    SCREEN = Screen(<span class="dig">1</span>)
     main()
 </pre>
 </body>

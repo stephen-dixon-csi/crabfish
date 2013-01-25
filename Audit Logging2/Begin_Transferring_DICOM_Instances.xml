@@ -1,0 +1,60 @@
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:43.757-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110102"
+            codeSystemName="DCM"
+            displayName="Begin Transferring DICOM Instances" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="paul-w854rh"
+        NetworkAccessPointTypeCode="1"
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="127.0.0.1"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="85ANWJK"
+        ParticipantObjectTypeCode="1"
+        ParticipantObjectTypeCodeRole="1" >
+
+        <ParticipantObjectIDTypeCode code="2" />
+    </ParticipantObjectIdentification>
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.124.113532.139.60.64.70.20030808.211713.4776192"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110180"
+            codeSystemName="DCM"
+            displayName="Study Instance UID" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>

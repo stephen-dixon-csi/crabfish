@@ -1,0 +1,113 @@
+# HOW TO RUN THIS TEST CASE:
+-HIPPA Compliance requires us to ensure that audit messages are written in XML format.  An audit message identifies the event, active participants (who is involved in the event), the participating object (any information transferred), and the audit source (which reported the log message). 
+*
+# Setup Monitoring
+*SSH into the test server and navigate to the following directory: 
+<DIRECTORY>
+* In the terminal, enter the following command:
+tail -f <FILE> | grep <LOGGER_NAME>
+# Trigger Data Events
+*Using %Z_DEVICE% or %Z_BROWSER%, launch the application. Log in with %Z_SECURITY%.
+# Search - Patient Name
+*Type any letter into the patient name field, and perform a search.
++A log message that resembles the comment below appears. (NOTE: Further verification takes place later)
+#QUERY LOG EXAMPLE:
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:39.18-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin@10.1.21.100" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectQuery>
+e1RhZ3M9U2VyaWVzRGF0ZXxTZXJpZXNUaW1lfFNlcmllc0Rlc2NyaXB0aW9ufEluc3RpdHV0aW9uTmFtZSwgU3R1ZHlJbnN0YW5jZVVJRD0xLjIuMTI0LjExMzUzMi4xMzkuNjAuNjQuNzAuMjAwMzA4MDguMjExNzEzLjQ3NzYxOTIsIFNvcENsYXNzVUlEPTEuMi44NDAuMTAwMDguNS4xLjQuMS4xLjEwNC4xLCBEaWNvbVJlcG9zaXRvcnk9ZGljb21xcn0=
+        </ParticipantObjectQuery>
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+*Confirm the following results:
++The Audit message begins and ends with <AuditMessage> and </AuditMessage> respectively.
++The Audit message is composed, at the highest level, of the following tags: 1 EventIdentification tag, 3 ActiveParticipant tags, 1 AuditSourceIdentification tag, and 1 or more ParticipantObjectIdentification.
+*Inspect the EventIdentification tag. Confirm:
++The EventID tag contains the following information:
+code="110112"
+codeSystemName="DCM"
+displayName="Query"
++EventActionCode="E"
++EventDateTime displays the date, time, and time zone.
++EventOutcomeIndicator="0"
+*Inspect the 3 ActiveParticipant tags. Confirm:
++The display names for 2 of the tags are, in no particular order, "Source" and "Destination".  The third tag has no display name.
+*Inspect the "Source" ActiveParticipant.
++NetworkAccessPointID is set to the name of the server machine.
++NetworkAccessPointTypeCode="1"
++UserID is the process ID of the service that issued the request.
++UserIsRequestor="false"
++The RoleIDCode tag contains the following attribute-value pairs:
+code="110153"
+codeSystemName="DCM"
+displayName="Source"
+*Inspect the "Destination" ActiveParticipant.
++UserID is the URL or IP of the PACS.
++UserIsRequestor="false"
++The RoleIDCode tag contains the following attribute-value pairs:
+code="110152"
+codeSystemName="DCM"
+displayName="Destination"
+*Inspect the final ActiveParticipant.
++The UserID of the final participant has the form loginUsername@domain
++UserIsRequestor="true", or is absent.
+*Inspect the remaining tags.  Confirm:
++The AuditSourceIdentification AuditSourceID is the name of the server machine responsible for the audit logging.
++The ParticipantObjectIdentification contains 3 attributes and 3 elements.  (EXAMPLE: <xml attr1="0" attr2="1" attr3="2"><elem1/><elem2></elem2><elem3/></xml>)
+
+# Search - Study Description
+# Search - Patient ID
+# Search - Date
+# Search - Date Range
+# Search - Modality
+# Search - Zero Results

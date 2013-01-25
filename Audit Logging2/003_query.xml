@@ -1,0 +1,120 @@
+<AuditMessage>
+	<EventIdentification EventActionCode="E"
+		EventDateTime="2012-10-02T14:37:34.803-06:00" EventOutcomeIndicator="0">
+		<EventID code="110112" codeSystemName="DCM" displayName="Query" />
+	</EventIdentification>
+	<ActiveParticipant UserID="27956" UserIsRequestor="false">
+		<RoleIDCode code="110153" codeSystemName="DCM" displayName="Source" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="dicomqr" UserIsRequestor="false">
+		<RoleIDCode code="110152" codeSystemName="DCM" displayName="Destination" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="admin@10.1.21.67" />
+	<AuditSourceIdentification AuditSourceID="paul-w854rh" />
+	<ParticipantObjectIdentification
+		ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+		ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+		<ParticipantObjectIDTypeCode code="110181"
+			codeSystemName="DCM" displayName="SOP Class UID" />
+		<ParticipantObjectQuery>e1RhZ3M9UGF0aWVudFNleCwgTW9kYWxpdGllc0luU3R1ZHk9Q1QsIERpY29tUmVwb3NpdG9yeT1kaWNvbXFyfQ==
+		</ParticipantObjectQuery>
+		<ParticipantObjectDetail type="TransferSyntax"
+			value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+	</ParticipantObjectIdentification>
+</AuditMessage>
+
+<AuditMessage>
+	<EventIdentification EventActionCode="E"
+		EventDateTime="2012-10-02T14:38:28.62-06:00" EventOutcomeIndicator="0">
+		<EventID code="110112" codeSystemName="DCM" displayName="Query" />
+	</EventIdentification>
+	<ActiveParticipant UserID="27956" UserIsRequestor="false">
+		<RoleIDCode code="110153" codeSystemName="DCM" displayName="Source" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="dicomqr" UserIsRequestor="false">
+		<RoleIDCode code="110152" codeSystemName="DCM" displayName="Destination" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="admin@10.1.21.67" />
+	<AuditSourceIdentification AuditSourceID="paul-w854rh" />
+	<ParticipantObjectIdentification
+		ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+		ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+		<ParticipantObjectIDTypeCode code="110181"
+			codeSystemName="DCM" displayName="SOP Class UID" />
+		<ParticipantObjectQuery>e1RhZ3M9UGF0aWVudE5hbWUsIFN0dWR5SW5zdGFuY2VVSUQ9MS4yLjgyNi4wLjEuMDEuNTczLjUyNjI1LjU3MzU1MDguOSwgRGljb21SZXBvc2l0b3J5PWRpY29tcXJ9
+		</ParticipantObjectQuery>
+		<ParticipantObjectDetail type="TransferSyntax"
+			value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+	</ParticipantObjectIdentification>
+</AuditMessage>
+
+<AuditMessage>
+	<EventIdentification EventActionCode="E"
+		EventDateTime="2012-10-02T14:38:28.678-06:00" EventOutcomeIndicator="4">
+		<EventID code="110112" codeSystemName="DCM" displayName="Query" />
+	</EventIdentification>
+	<ActiveParticipant UserID="27956" UserIsRequestor="false">
+		<RoleIDCode code="110153" codeSystemName="DCM" displayName="Source" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="dicomqr" UserIsRequestor="false">
+		<RoleIDCode code="110152" codeSystemName="DCM" displayName="Destination" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="admin@10.1.21.67" />
+	<AuditSourceIdentification AuditSourceID="paul-w854rh" />
+	<ParticipantObjectIdentification
+		ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+		ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+		<ParticipantObjectIDTypeCode code="110181"
+			codeSystemName="DCM" displayName="SOP Class UID" />
+		<ParticipantObjectQuery>e1RhZ3M9U2VyaWVzRGF0ZXxTZXJpZXNUaW1lfFNlcmllc0Rlc2NyaXB0aW9ufEluc3RpdHV0aW9uTmFtZSwgU3R1ZHlJbnN0YW5jZVVJRD0xLjIuODI2LjAuMS4wMS41NzMuNTI2MjUuNTczNTUwOC45LCBTb3BDbGFzc1VJRD0xLjIuODQwLjEwMDA4LjUuMS40LjEuMS4xMDQuMSwgRGljb21SZXBvc2l0b3J5PWRpY29tcXJ9
+		</ParticipantObjectQuery>
+		<ParticipantObjectDetail type="TransferSyntax"
+			value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+	</ParticipantObjectIdentification>
+</AuditMessage>
+
+<AuditMessage>
+	<EventIdentification EventActionCode="E"
+		EventDateTime="2012-10-02T14:38:28.731-06:00" EventOutcomeIndicator="0">
+		<EventID code="110112" codeSystemName="DCM" displayName="Query" />
+	</EventIdentification>
+	<ActiveParticipant UserID="27956" UserIsRequestor="false">
+		<RoleIDCode code="110153" codeSystemName="DCM" displayName="Source" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="dicomqr" UserIsRequestor="false">
+		<RoleIDCode code="110152" codeSystemName="DCM" displayName="Destination" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="unknown@unknown" />
+	<AuditSourceIdentification AuditSourceID="paul-w854rh" />
+	<ParticipantObjectIdentification
+		ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+		ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+		<ParticipantObjectIDTypeCode code="110181"
+			codeSystemName="DCM" displayName="SOP Class UID" />
+		<ParticipantObjectDetail type="TransferSyntax"
+			value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+	</ParticipantObjectIdentification>
+</AuditMessage>
+
+<AuditMessage>
+	<EventIdentification EventActionCode="E"
+		EventDateTime="2012-10-02T14:38:28.731-06:00" EventOutcomeIndicator="0">
+		<EventID code="110112" codeSystemName="DCM" displayName="Query" />
+	</EventIdentification>
+	<ActiveParticipant UserID="27956" UserIsRequestor="false">
+		<RoleIDCode code="110153" codeSystemName="DCM" displayName="Source" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="dicomqr" UserIsRequestor="false">
+		<RoleIDCode code="110152" codeSystemName="DCM" displayName="Destination" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="unknown@unknown" />
+	<AuditSourceIdentification AuditSourceID="paul-w854rh" />
+	<ParticipantObjectIdentification
+		ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+		ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+		<ParticipantObjectIDTypeCode code="110181"
+			codeSystemName="DCM" displayName="SOP Class UID" />
+		<ParticipantObjectDetail type="TransferSyntax"
+			value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+	</ParticipantObjectIdentification>
+</AuditMessage>

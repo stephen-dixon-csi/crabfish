@@ -1,0 +1,67 @@
+<Authentication>
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:32.33-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110114"
+            codeSystemName="DCM"
+            displayName="User Authentication" />
+
+        <EventTypeCode
+            code="110122"
+            codeSystemName="DCM"
+            displayName="Login" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.21.100"
+        NetworkAccessPointTypeCode="2"
+        UserID="admin" />
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="10.1.20.254"
+        UserIsRequestor="false" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:52.702-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110114"
+            codeSystemName="DCM"
+            displayName="User Authentication" />
+
+        <EventTypeCode
+            code="110123"
+            codeSystemName="DCM"
+            displayName="Logout" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.21.100"
+        NetworkAccessPointTypeCode="2"
+        UserID="admin" />
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="10.1.20.254"
+        UserIsRequestor="false" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+</Authentication>

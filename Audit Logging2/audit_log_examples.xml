@@ -1,0 +1,1114 @@
+<ApplicationStart>
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:02.666-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="Root WebApplicationContext" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.427-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;pureweb-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.545-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;auditing-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.631-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;clinicalapps-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.833-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;cluster-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.883-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;dicomqr-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.942-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;imageviewer-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:04.121-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;resmd-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:04.135-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;dispatcher-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+</ApplicationStart>
+
+<Authentication>
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:32.33-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110114"
+            codeSystemName="DCM"
+            displayName="User Authentication" />
+
+        <EventTypeCode
+            code="110122"
+            codeSystemName="DCM"
+            displayName="Login" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.21.100"
+        NetworkAccessPointTypeCode="2"
+        UserID="admin" />
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="10.1.20.254"
+        UserIsRequestor="false" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:52.702-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110114"
+            codeSystemName="DCM"
+            displayName="User Authentication" />
+
+        <EventTypeCode
+            code="110123"
+            codeSystemName="DCM"
+            displayName="Logout" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.21.100"
+        NetworkAccessPointTypeCode="2"
+        UserID="admin" />
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="10.1.20.254"
+        UserIsRequestor="false" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+</Authentication>
+
+<Query>
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:32.497-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin@10.1.21.100" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectQuery>
+e1N0dWR5RGF0ZT0yMDEyMTEwMi0yMDEyMTEwMiwgRGljb21SZXBvc2l0b3J5PWRpY29tcXJ9
+        </ParticipantObjectQuery>
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:36.301-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin@10.1.21.100" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectQuery>
+e01vZGFsaXRpZXNJblN0dWR5PUNULCBEaWNvbVJlcG9zaXRvcnk9ZGljb21xcn0=
+        </ParticipantObjectQuery>
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:38.901-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin@10.1.21.100" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectQuery>
+e1N0dWR5SW5zdGFuY2VVSUQ9MS4yLjEyNC4xMTM1MzIuMTM5LjYwLjY0LjcwLjIwMDMwODA4LjIxMTcxMy40Nzc2MTkyLCBEaWNvbVJlcG9zaXRvcnk9ZGljb21xcn0=
+        </ParticipantObjectQuery>
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:38.973-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="unknown@unknown" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:39.001-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="unknown@unknown" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:39.026-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="unknown@unknown" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:39.045-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="unknown@unknown" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:39.07-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="unknown@unknown" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:39.18-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin@10.1.21.100" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectQuery>
+e1RhZ3M9U2VyaWVzRGF0ZXxTZXJpZXNUaW1lfFNlcmllc0Rlc2NyaXB0aW9ufEluc3RpdHV0aW9uTmFtZSwgU3R1ZHlJbnN0YW5jZVVJRD0xLjIuMTI0LjExMzUzMi4xMzkuNjAuNjQuNzAuMjAwMzA4MDguMjExNzEzLjQ3NzYxOTIsIFNvcENsYXNzVUlEPTEuMi44NDAuMTAwMDguNS4xLjQuMS4xLjEwNC4xLCBEaWNvbVJlcG9zaXRvcnk9ZGljb21xcn0=
+        </ParticipantObjectQuery>
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:43.558-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110112"
+            codeSystemName="DCM"
+            displayName="Query" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="dicomqr"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin@127.0.0.1" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.840.10008.5.1.4.32.1"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110181"
+            codeSystemName="DCM"
+            displayName="SOP Class UID" />
+
+        <ParticipantObjectQuery>
+e1N0dWR5SW5zdGFuY2VVSUQ9MS4yLjEyNC4xMTM1MzIuMTM5LjYwLjY0LjcwLjIwMDMwODA4LjIxMTcxMy40Nzc2MTkyLCBEaWNvbVJlcG9zaXRvcnk9ZGljb21xcn0=
+        </ParticipantObjectQuery>
+
+        <ParticipantObjectDetail
+            type="TransferSyntax"
+            value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg==" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+</Query>
+
+<BeginTransfer>
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:43.757-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110102"
+            codeSystemName="DCM"
+            displayName="Begin Transferring DICOM Instances" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="paul-w854rh"
+        NetworkAccessPointTypeCode="1"
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="127.0.0.1"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="85ANWJK"
+        ParticipantObjectTypeCode="1"
+        ParticipantObjectTypeCodeRole="1" >
+
+        <ParticipantObjectIDTypeCode code="2" />
+    </ParticipantObjectIdentification>
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.124.113532.139.60.64.70.20030808.211713.4776192"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110180"
+            codeSystemName="DCM"
+            displayName="Study Instance UID" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+</BeginTransfer>
+
+<DICOM-Accessed>
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="C"
+        EventDateTime="2012-11-02T11:11:43.875-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110103"
+            codeSystemName="DCM"
+            displayName="DICOM Instances Accessed" />
+    </EventIdentification>
+
+    <ActiveParticipant UserID="admin@127.0.0.1" />
+
+    <ActiveParticipant
+        UserID="2103"
+        UserIsRequestor="false" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="85ANWJK"
+        ParticipantObjectTypeCode="1"
+        ParticipantObjectTypeCodeRole="1" >
+
+        <ParticipantObjectIDTypeCode code="2" />
+    </ParticipantObjectIdentification>
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.124.113532.139.60.64.70.20030808.211713.4776192"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110180"
+            codeSystemName="DCM"
+            displayName="Study Instance UID" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+</DICOM-Accessed>
+
+<EndTransfer>
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="C"
+        EventDateTime="2012-11-02T11:11:43.765-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110104"
+            codeSystemName="DCM"
+            displayName="DICOM Instances Transferred" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="paul-w854rh"
+        NetworkAccessPointTypeCode="1"
+        UserID="2103"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110153"
+            codeSystemName="DCM"
+            displayName="Source" />
+    </ActiveParticipant>
+
+    <ActiveParticipant
+        UserID="127.0.0.1"
+        UserIsRequestor="false" >
+
+        <RoleIDCode
+            code="110152"
+            codeSystemName="DCM"
+            displayName="Destination" />
+    </ActiveParticipant>
+
+    <ActiveParticipant UserID="admin" />
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="85ANWJK"
+        ParticipantObjectTypeCode="1"
+        ParticipantObjectTypeCodeRole="1" >
+
+        <ParticipantObjectIDTypeCode code="2" />
+    </ParticipantObjectIdentification>
+
+    <ParticipantObjectIdentification
+        ParticipantObjectID="1.2.124.113532.139.60.64.70.20030808.211713.4776192"
+        ParticipantObjectTypeCode="2"
+        ParticipantObjectTypeCodeRole="3" >
+
+        <ParticipantObjectIDTypeCode
+            code="110180"
+            codeSystemName="DCM"
+            displayName="Study Instance UID" />
+    </ParticipantObjectIdentification>
+
+</AuditMessage>
+</EndTransfer>

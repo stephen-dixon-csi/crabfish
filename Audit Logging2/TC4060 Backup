@@ -1,0 +1,107 @@
+# HOW TO RUN THIS TEST CASE:
+-HIPPA Compliance requires us to ensure that audit messages are written in XML format.  An audit message identifies the event, active participants (who is involved in the event), the participating object (any information transferred), and the audit source (which reported the log message).
+*
+# Setup Monitoring
+*SSH into the test server and navigate to the following directory: 
+<TODO-DIRECTORY>
+* In the terminal, enter the following command:
+tail -f <TODO-FILE> | grep <TODO-LOGGER_NAME>
++The SSH terminal follows the file and reports any strings appended to it that include the grep argument.
+# Trigger Data Events
+*Using %Z_DEVICE% or %Z_BROWSER%, launch the application. Log in with %Z_SECURITY%.
+# Load a study with a single series
+*Load the following dataset: "Chris Lemon (2000 Slices) | patientID=4996c399p13ffdp | O | CT | 2000 Slices (Study) | access=1431a62a1 | Dr. So&So CSI | 2000 slices | data-standard"
++Three log messages should appear in the terminal while loading the study: DICOM Instances Accessed, Begin Transferring DICOM Instances, and DICOM Instances Transferred.
+#Dicom Instances Accessed Audit Log Message - for an example, open DICOMAccessed.xml
+*Open DICOMAccessed.xml
++The first log message, DICOM Instances Accessed, resembles the opened file.
++TIP: You may close this file at any time you desire.
+*Inspect the XML code printed on the terminal for any format issues.
++There are no format issues; every bracket and quote has a match and every value is surrounded by quotes.
+*Inspect the audit message. Confirm:
++The EventActionCode should be "C" 
++The EventDateTime should be up to date and specifies the date, time, and time-zone. 
++The EventOutcomeIndicator should be "0" 
++The EventID Code should be 110103 
++The displayName should be "DICOM Instances Accessed" 
++One of the ActiveParticipant UserID's should be of the format loginName@domain-name and should correspond to your computer or device. 
++The other ActiveParticipant UserID should be the process ID of the process that handled the service.  UserIsRequestor="false"
++The AuditSourceIdentifiction AuditSourceID should be the name of the test server. 
+#Begin Transferring DICOM Instances - for an example, see "Begin_Transferring_DICOM_Instances.xml"
+*Scroll down to the second log message, "Begin Transferring DICOM Instances", and open the attached file "Begin_Transferring_DICOM_Instances.xml"
++The second log message resembles the attached file.
++TIP: You may close this file at any time you desire.
+*Confirm the following information is included for the EventIdentification of the audit message.
++The EventActionCode should be "E" 
++The EventDateTime should be up to date and specifies the date, time, and time-zone. 
++In the Event ID tag, the code should be "110102" , the codeSystemName "DCM"  , and display name "Begin Transferring DICOM Instances" 
++EventOutcomeIndicator should be zero. 
+*Confirm the following information is included in the ActiveParticipants of the audit message.
++There are three ActiveParticipants - two of them have display names ("Source" and "Destination") and the other does not.
++One of the ActiveParticipants should be a source. The RoleIDCode tag should specify:
+displayName="Source"
+RoleID Code "110153"
+codeSystemName ="DCM"
++The source's UserID should be a process ID.  The NetworkAccessPointID is the name of the test server and its NetworkAccessPointType="1".
++One of the ActiveParticipants should be a destination. Its RoleIDCode tag should specify:
+display name="Destination"
+code "110152"
+codeSystemName="DCM"
++The destination's UserID should be the IP Address of the PACS.  
++For both the source and destination, UserIsRequestor=false
++AlternativeUserID=??  
++One of the ActiveParticipants's UserID should have the form of loginName@domain-name; UserIsRequestor is either absent or "true". 
+*Confirm the following information is also present:
++The AuditSourceIdentifiction AuditSourceID should be the name of the computer that creates the log statements ; currently, this has the same value as the NetworkAccessPointID of the source.
++There will be two ParticipantObjectIdentification XML blocks.
++One of the participating objects will have the following tag-value pairs:
+ParticipantObjectTypeCode="1" 
+ParticipantObjectTypeCodeRole="1",  ParticipantObjectIDTypeCode code="2".  
++The ParticipantObjectID=4996c399p13ffdp
++The other participating object will have the following tag-value pairs:
+ParticipantObjectID="2.16.124.113543.6003.01.703.64898.703125.3" (the study instance UID of the study) 
+ParticipantObjectTypeCode="2"  ParticipantObjectTypeCodeRole="3"  
++The ParticipantObjectIDTypeCode has the following attributes:
+code="110180" 
+CodeSystemName="DCM" 
+displayName="Study Instance UID" 
++The audit message begins and ends with <AuditMessage> and </AuditMessage> respectively.
+*
+#EXAMPLE: DICOM INSTANCES TRANSFERRED MESSAGE
+*Open the final xml attachment, "DICOM_Instances_Transferred.xml"
+*Check the third message.
++The third audit message looks like the xml file.
++TIP: You may now close the xml file at any time you wish.
+*Confirm the following:
++In the EventID tag, code="110104", displayName="DICOM Instances Transferred", and codeSystemName="DCM"
++The EventActionCode="C" iff the receiver did not hold copies of the instance transferred (ie. no cached copy).  If the copy was cached, the value should be "R".  In the unlikely case that the dataset was cached and then later modified on the server, the value should be "U"; if this is the case, load another dataset.
++EventDateTime is up to date and shows the time, date, and time zone.
++All three ActiveParticipants sections are the exact same as before.
++Everything in the AuditSourceIdentification section is the exact same as before.
++Everything in the ParticipatingObject section is the exact same as before.
++The message includes information about a single patient.
+# Load a study with multiple series
+*Load a study containing multiple series from data-standard.
++The same three log messages should appear in the terminal, updated for the newly selected study, with the following differences:
++One of the ParticipantObjectID should be the study Instance UID of the selected study, and the other is their patient ID.
++The time and date should be updated to the current server time.
+# Load a study containing a report
+*Load an SR Report from data-standard.
++The same three log messages should appear in the terminal, updated for the newly selected study, with the following differences:
++One of the ParticipantObjectID should be the study Instance UID of the selected study, and the other is their patient ID.
++The time and date should be updated to the current server time.
+# Load a study containing multiframe data - for other examples, see https://docs.google.com/a/calgaryscientific.com/spreadsheet/ccc?key=0Ap1lFX6RMamNdExJLVRjX09RZ3NDZE83VklyT2RMYlE&pli=1#gid=0
+*Load the following study: MR_MREnchanced_CardiacCine_2 | data-newyork
++The same three log messages should appear in the terminal, updated for the newly selected study, with the following differences:
++One of the ParticipantObjectID should be the study Instance UID of the selected study, and the other is their encoded patient ID.
++The time and date should be updated to the current server time.
++The ActiveParticipant representing the PACS should be updated to reflect that the PACS is data-newyork.  For example, UserID is different; AlternativeUserID, if present, should also be different.
+#Load a PDF
+*Load a PDF Report from data-demo.
++The same three log messages should appear in the terminal, updated for the newly selected study, with the following differences:
++One of the ParticipantObjectID should be the study Instance UID of the selected study, and the other is their encoded patient ID.
++The time and date should be updated to the current server time.
++The ActiveParticipant representing the PACS should be updated to reflect that the PACS is data-demo.  For example, UserID is different; AlternativeUserID, if present, should also be different.
+# Load a cached study (iOS Only)
+*Completely cache and load a study.
++TODO

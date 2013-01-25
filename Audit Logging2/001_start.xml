@@ -1,0 +1,314 @@
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:02.666-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="Root WebApplicationContext" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.427-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;pureweb-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.545-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;auditing-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.631-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;clinicalapps-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.833-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;cluster-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.883-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;dicomqr-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:03.942-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;imageviewer-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:04.121-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;resmd-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>
+
+<AuditMessage>
+
+    <EventIdentification
+        EventActionCode="E"
+        EventDateTime="2012-11-02T11:11:04.135-06:00"
+        EventOutcomeIndicator="0" >
+
+        <EventID
+            code="110100"
+            codeSystemName="DCM"
+            displayName="Application Activity" />
+
+        <EventTypeCode
+            code="110120"
+            codeSystemName="DCM"
+            displayName="Application Start" />
+    </EventIdentification>
+
+    <ActiveParticipant
+        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointTypeCode="2"
+        UserID="2103"
+        UserIsRequestor="false"
+        UserName="WebApplicationContext for namespace &apos;dispatcher-servlet&apos;" >
+
+        <RoleIDCode
+            code="110150"
+            codeSystemName="DCM"
+            displayName="Application" />
+    </ActiveParticipant>
+
+    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+
+</AuditMessage>

@@ -1,0 +1,235 @@
+#ABOUT THIS TEST CASE:
+This test case checks the conformance of the audit logging feature to DICOM Supplement 95 and RFC-3881, as required for HIPPA Compliance.  DICOM Supplement 95 is a guideline which specifies the schema for audit messages, the types of audit messages, and what information is required and permitted for those messages. The logger class is controlled by the auditing_plugin.properties file located int the /opt/CSI/PureWeb/Server/tomcat/conf folder, and the log statements are recorded in /opt/CSI/PureWeb/tomcat/log/pureweb.log by the slf4j logger.  Additionally, they may be reported to a MySQL database configured by the MySQL logger, also defined in the auditing_plugin.properties file.
+
+The audit messages are generated with respect to DICOM Supplement 95's recommendations.  Some values cannot be predetermined (such as the NetworkAccessPointID), whereas others can (such as the RoleIDCode in each ActiveParticipant). Certain log statements may not appear when using client-side rendering because caching reduces the number of server communications needed to run a session.  In addition, when a user is disconnected by a timeout, no logout message appears because by the time the logger receives the event notification, the SecurityContext information and the Session are already destroyed.
+
+In this test case, it is extremely important to separate the records you keep for each client.
+#KNOWN ISSUES:
+-  127.0.0.1 is the IP address for "localhost".  If you are not testing %Z_PLUGIN% using a browser, you should never see it in any of the test results.
+-  Query Audit Messages may appear which indicate "unknown@unknown".  This is a known issue, but has not yet been confirmed as a bug.
+*
+#See Preconditions
+-catalina.sh is running
+-All fields in auditing_plugin.properties file are set to true
+-The slf4j logger is present in the auditing_plugin.properties file
+-View Recent Series is turned off (mobile clients only).
+-data standard is configured as a PACS
+*
+#Record Predetermined Information
+*Using the command prompt, ping the test server. Record the dns name of the server and its IP address.
++You now know the DNS name and IP address of the server.
+*Get the IP Address of %Z_DEVICE%, or your machine (if using %Z_BROWSER%).
++You now know the IP address of your test client.
+*Get the IP Address of a 2nd client.
++You now know the IP address of your secondary test client.
+*
+#Setup monitoring
+*SSH into the test server
+*Open the conf folder.
++auditing_plugin.properties is there.
+*View auditing_plugin.properties, record the name of the slf4j logger, then exit the file.
++All fields in the properties file are set to true
++The slf4j auditlogger is enabled
+*Navigate to the tomcat log folder.
++pureweb.log is there.
+*Let <name> be the name of the slf4j logger.  In the terminal, type the following commands:
+tail -f pureweb.log | grep <name>
++The terminal follows the end of the audit message log file, and dynamically displays any new strings that are appended to it.
+*
+#Log into the server 
+*On %Z_DEVICE% or %Z_BROWSER%, launch %Z_PLUGIN% to the login page. Use %Z_SSL% for the connection.
++Login page is displayed for %Z_PLUGIN%.
+*Log into the server using both clients.  Ignore any audit messages. Record the usernames used by each client.
++Two audit messages appear to indicate that both clients have been logged in.
+*
+#Perform a search and then validate the audit message - EXAMPLE: SearchQuery.xml
+*On the first client, perform a search for the patient "AbdominalAorta, Stent"
++A search using the patient name is performed.
++An audit message for the query is appended to pureweb.log
+*For the audit message, confirm:
++The Audit message begins and ends with <AuditMessage> and </AuditMessage> respectively.
++The Audit message is composed, at the highest level, of the following tags: 1 EventIdentification tag, 3 ActiveParticipant tags, 1 AuditSourceIdentification tag, and 1 or more ParticipantObjectIdentification.
+*Inspect the EventIdentification tag. Confirm:
++EventActionCode="E"
++EventDateTime displays the date, time, and time zone.
++EventOutcomeIndicator="0"
++The EventID tag contains the following information:
+code="110112"
+codeSystemName="DCM"
+displayName="Query"
+*Inspect the 3 ActiveParticipant tags. Confirm:
++The display names for 2 of the tags are, in no particular order, "Source" and "Destination".  The third tag has no display name.
+*Inspect the "Source" ActiveParticipant.
++NetworkAccessPointID is set to the name of the server machine.
++NetworkAccessPointTypeCode="1"
++UserID is the process ID of the service that issued the request.
++UserIsRequestor="false"
++The RoleIDCode tag contains the following attribute-value pairs:
+code="110153"
+codeSystemName="DCM"
+displayName="Source"
+*Inspect the "Destination" ActiveParticipant.
++There is 1 "Destination" ActiveParticipant per PACS. For each "Destination":
++UserID is the URL or IP of the PACS.
++UserIsRequestor="false"
++The RoleIDCode tag contains the following attribute-value pairs:
+code="110152"
+codeSystemName="DCM"
+displayName="Destination"
+*Inspect the final ActiveParticipant.
++The UserID of the final participant has the form loginUsername@domain
++UserIsRequestor="true", or is absent.
+*Inspect the remaining tags.  Confirm:
++The AuditSourceIdentification AuditSourceID is the name of the server machine responsible for the audit logging.
++The ParticipantObjectIdentification contains 3 attributes and 3 elements.  (EXAMPLE: <xml attr1="0" attr2="1" attr3="2"><elem1/><elem2></elem2><elem3/></xml>)
++ParticipantObjectID=1.2.840.10008.5.1.4.32.1
++ParticipantObjectTypeCode="2"
++ParticipantObjectTypeCodeRole="3"
++In the ParticipantObjectIDTypeCode:
+code="110181"
+codeSystemName="DCM"
+displayName="SOP Class UID"
++ParticipantObjectQuery has an encoded value.
++ParticipantObjectDetail tag exists, and:
+type="TransferSyntax"
+value="MS4yLjg0MC4xMDAwOC41LjEuNC4zMg=="
+*Open the following URL and copy and paste the ParticipantObjectQuery into the decoder.  Decode.
++The ParticipantObjectQuery is decoded into human language.
++The decoded message is consistent with the search query you performed earlier.  It specifies the patient name field and the DicomRepository field.
+*As the second client, perform the same search.
++A second audit message appears when the query is submitted for the second client.
++One of the ActiveParticipants has a userID with the form loginName@domain, where loginName belongs to the 2nd participant. UserIsRequestor is still either true or absent.
++Everything else in the second audit message is the same as the previous audit message.
+*
+#Open the series list for a study  and then validate the audit message. EXAMPLE: SeriesListQuery.xml
+*As the first client, open the series list or preview pane (whichever is applicable) for the "AbdominalAorta, Stent (2000 Slices)" study.
++A new auditing message appears.
++The ParticipantObjectQuery is different
++In addition, data-standard is the only queried PACS, and the only "destination".
++Every other part of the audit message is the exact same as the previous audit query message.
+*Decode the ParticipantObjectQuery
++The decoded statement shows the study instance UID of the opened study (1.3.6.1.4.1.5962.1.2.30.1166562673.14401) and data-standard as the DicomRepository.
+*As the second client, open the series list for the same study.
++A new query audit message appears.  The second client can be distinguished from the first client in the new message.
+*
+#Load a Study in %Z_VIEW% (specifies server- or client-side view)  and then validate the audit message
+*As the first client, Load the following dataset: "AbdominalAorta, Stent | Enhanced CT QA Test | patient id=0030 | accession=0030 | CT | data-standard"
+*Check the audit log.
++If streaming the study, the following 4 audit messages should appear:
+1) Query
+2) Begin Transferring DICOM Instances
+3) DICOM Instances Accessed
+4) DICOM Instances Transferred
++If caching the study, the following 3 audit message should appear:
+1) Query
+2) Begin Transferring DICOM Instances
+3) DICOM Instances Transferred
+#..Query -  EXAMPLE: SeriesListQuery.xml
+*Inspect the first audit message that appeared after loading the study.  Compare it to the previous audit query message.
++There should be no difference between the two audit messages.
+*
+#..The "Begin Transferring DICOM Instances" Audit Message - EXAMPLE: Begin_Transferring_DICOM_Instances.xml
+*Confirm the following information is included for the EventIdentification of the audit message.
++The EventIdentification tag should contain the following attributes:
+EventActionCode="E"
+EventOutcomeIndicator="0"
+EventDateTime should be up to date and show the date, time, and time-zone.
++The EventID element in the EventIdentification tag should contain the following attributes:
+code="110102"
+codeSystemName="DCM"
+displayName="Begin Transferring DICOM Instances" 
+*Confirm the following information is included in the ActiveParticipants of the audit message.
++There are three ActiveParticipants - two of them have display names ("Source" and "Destination") and the other does not.
++One of the ActiveParticipants should be a source. Its RoleIDCode tag should specify:
+displayName="Source"
+RoleID Code "110153"
+codeSystemName ="DCM"
++The source's UserID is a unique identifier for the test server process which handled the load, such as a process ID, the node name, etc.
++For the source, either:
+a) NetworkAccessPointID is the dns name of the test server, and NetworkAccessPointTypeCode="1"
+OR
+b ) NetworkAccessPointID is the test server's IP address and NetworkAccessPointTypeCode="2"
+OR 
+c) Both fields are absent.
++One of the ActiveParticipants should be a destination. Its RoleIDCode tag should specify:
+display name="Destination"
+code "110152"
+codeSystemName="DCM"
++The UserID of the destination is the IP address of %Z_DEVICE%.
++For both the source and destination, UserIsRequestor=false
++The final ActiveParticipants's UserID takes the form of loginName@domain-name; UserIsRequestor is either absent or "true". 
+*Confirm the following information is also present:
++The AuditSourceIdentifiction AuditSourceID is the dns name of the test server that generated the log statements.
++There will be two ParticipantObjectIdentification XML blocks.
++One of the participating objects will have the following tag-value pairs:
+ParticipantObjectTypeCode="1" 
+ParticipantObjectTypeCodeRole="1",  ParticipantObjectIDTypeCode code="2".  
++The ParticipantObjectID=0030 (the patient ID of the loaded study)
++The other participating object will have the following tag-value pairs:
+ParticipantObjectID="1.3.6.1.4.1.5962.1.2.30.1166562673.14401" (the study instance UID of the loaded study) 
+ParticipantObjectTypeCode="2"  ParticipantObjectTypeCodeRole="3"  
++The ParticipantObjectIDTypeCode has the following attributes:
+code="110180" 
+CodeSystemName="DCM" 
+displayName="Study Instance UID" 
++The audit message begins and ends with <AuditMessage> and </AuditMessage> respectively.
+*
+#.. The "DICOM Instances Accessed" Audit Message (Streaming/Server-Side View Only)
+NOTE: Skip this section if the study was cached prior to loading it.
+EXAMPLE: DICOMAccessed.xml
+*Inspect the XML format of the "DICOM Instances Accessed" Audit Message. Check:
++There are no format issues; every bracket and quote has a match, and every value is surrounded by quotes.
+*Inspect the audit message. Confirm:
++In the EventIdentification section:
+EventActionCode="C"
+EventDateTime shows the current date, time, and time zone
+EventOutcomeIndicator="0"
++In the EventID section:
+code="110103"
+codeSystemName="DCM"
+displayName="DICOM Instances Accessed"
+*Inspect the ActiveParticipants. Confirm:
++One ActiveParticipant is a human user, whose UserID takes the form loginName@domain.  The userIsRequestor field is either absent, or equal to true.
++The other ActiveParticipant is the server machine running %Z_PLUGIN%.  In particular:
+UserID= the pid of the process (a number)
+UserIsRequestor=false
++The AuditSourceIdentifiction AuditSourceID is the DNS name of the test server.
+*Inspect the ParticipantObjectIdentification section.  Confirm:
++There are two ParticipantObjectIdentification blocks.  
++One block contains the following information:
+ParticipantObjectID="0030"
+ParticipantObjectTypeCode="1"
+ParticipantObjectTypeCodeRole="1"
+ParticipantObjectIDTypeCode code="2"
++The other block contains the following information:
+ParticipantObjectID="1.3.6.1.4.1.5962.1.2.30.1166562673.14401"
+ParticipantObjectTypeCode="2"
+ParticipantObjectTypeCodeRole="3"
++Furthermore, this block also contains a ParticipantObjectIDTypeCode with the following attributes:
+code="110180"
+codeSystemName="DCM"
+displayName="Study Instance UID"
+*
+#.. End Transfer
+EXAMPLE: DICOM_Instances_Transferred.xml
+*For the final audit message, confirm:
++The EventActionCode="C".
++EventDateTime is up to date and shows the time, date, and time zone.
++The EventID tag contains the following attribute-value pairs:
+code="110104"
+codeSystemName="DCM"
+displayName="DICOM Instances Transferred"
++All three ActiveParticipants sections are the exact same as the "Begin Transferring DICOM Instances" message.
++Everything in the AuditSourceIdentification section is the exact same as the "Begin Transferring DICOM Instances" message.
++Everything in the ParticipatingObject section is the exact same as the "Begin Transferring DICOM Instances" message.
+#Load the same study as the second client
+*As the second client, load the same dataset ("AbdominalAorta, Stent") in %Z_VIEW%.
++Each of the audit messages that appeared for the first client appear for the second client.
++The "Destination" active participant in the two transfer messages refer to the second client.
++The human active participant referenced in all three or four messages refers to the second client in the form of secondClientLoginName@domain
++Everything else should be the same in all of the messages.
+*
+#Logout
+*As each client, log out.
++An audit message appears that indicates that each user has logged out.
++The ActiveParticipant sections refer to the clients individually.
