@@ -20,7 +20,7 @@
         <RoleIDCode
             code="110153"
             codeSystemName="DCM"
-            displayName="Source Role ID" />
+            displayName="Source" />
     </ActiveParticipant>
 
     <ActiveParticipant
@@ -30,7 +30,7 @@
         <RoleIDCode
             code="110152"
             codeSystemName="DCM"
-            displayName="Destination Role ID" />
+            displayName="Destination" />
     </ActiveParticipant>
 
     <ActiveParticipant UserID="admin" />
