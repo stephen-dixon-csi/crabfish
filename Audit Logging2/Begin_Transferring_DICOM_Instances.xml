@@ -12,8 +12,8 @@
     </EventIdentification>
 
     <ActiveParticipant
-        NetworkAccessPointID="paul-w854rh"
-        NetworkAccessPointTypeCode="1"
+        NetworkAccessPointID="10.1.20.101"
+        NetworkAccessPointTypeCode="2"
         UserID="2103"
         UserIsRequestor="false" >
 
@@ -24,7 +24,7 @@
     </ActiveParticipant>
 
     <ActiveParticipant
-        UserID="127.0.0.1"
+        UserID="10.1.10.107"
         UserIsRequestor="false" >
 
         <RoleIDCode
@@ -33,7 +33,7 @@
             displayName="Destination" />
     </ActiveParticipant>
 
-    <ActiveParticipant UserID="admin" />
+    <ActiveParticipant UserID="admin@10.1.10.107" />
 
     <AuditSourceIdentification AuditSourceID="paul-w854rh" />
 
