@@ -13,8 +13,8 @@
 
     <ActiveParticipant
         NetworkAccessPointID="10.1.20.101"
-        NetworkAccessPointTypeCode="2"
-        UserID="2103"
+        NetworkAccessPointTypeCode="1"
+        UserID="autouitestw870"
         UserIsRequestor="false" >
 
         <RoleIDCode
