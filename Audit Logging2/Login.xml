@@ -17,18 +17,18 @@
     </EventIdentification>
 
     <ActiveParticipant
-        NetworkAccessPointID="10.1.21.100"
+        NetworkAccessPointID="10.1.10.107"
         NetworkAccessPointTypeCode="2"
-        UserID="admin" >
+        UserID="admin@10.1.10.107" >
 	</ActiveParticipant>
 
     <ActiveParticipant
-        NetworkAccessPointID="10.1.20.254"
+        NetworkAccessPointID="10.1.20.101"
         NetworkAccessPointTypeCode="2"
-        UserID="10.1.20.254"
+        UserID="autouitest"
         UserIsRequestor="false">
 	</ActiveParticipant>
 
-    <AuditSourceIdentification AuditSourceID="paul-w854rh" />
+    <AuditSourceIdentification AuditSourceID="autouitest" />
 
 </AuditMessage>
