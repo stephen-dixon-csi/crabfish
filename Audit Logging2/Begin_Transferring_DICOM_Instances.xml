@@ -12,7 +12,7 @@
     </EventIdentification>
 
     <ActiveParticipant
-        NetworkAccessPointID="10.1.20.101"
+        NetworkAccessPointID="autouitestw870"
         NetworkAccessPointTypeCode="1"
         UserID="10.1.20.101"
         UserIsRequestor="false" >
