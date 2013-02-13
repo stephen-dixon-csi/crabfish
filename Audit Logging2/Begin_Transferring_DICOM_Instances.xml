@@ -14,7 +14,7 @@
     <ActiveParticipant
         NetworkAccessPointID="autouitestw870"
         NetworkAccessPointTypeCode="1"
-        UserID="10.1.20.101"
+        UserID="autouitestw870"
         UserIsRequestor="false" >
 
         <RoleIDCode
